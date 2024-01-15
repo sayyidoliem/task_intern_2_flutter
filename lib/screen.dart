@@ -1,0 +1,21 @@
+//depedencies
+export 'package:flutter/material.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:bloc/bloc.dart';
+
+//model
+export 'package:task_intern_2_flutter/model/album.dart';
+export 'package:task_intern_2_flutter/model/comment.dart';
+export 'package:task_intern_2_flutter/model/photo.dart';
+export 'package:task_intern_2_flutter/model/post.dart';
+export 'package:task_intern_2_flutter/model/user.dart';
+export 'package:task_intern_2_flutter/user/user_bloc.dart';
+
+//utils
+export 'package:task_intern_2_flutter/utils/route/routes.dart';
+
+//view
+
+//component
+export 'package:task_intern_2_flutter/component/button.dart';
+export 'package:task_intern_2_flutter/component/card.dart';

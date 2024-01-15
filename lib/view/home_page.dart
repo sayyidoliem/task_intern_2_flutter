@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:task_intern_2_flutter/component/button.dart';
-import 'package:task_intern_2_flutter/component/card.dart';
+import 'package:task_intern_2_flutter/screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,10 +15,22 @@ class HomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            HomeButton(titleButton: "User List"),
-            HomeButton(titleButton: "Post List"),
-            HomeButton(titleButton: "Album List"),
-            HomeButton(titleButton: "Photo List"),
+            HomeButton(
+              titleButton: "User List",
+              onPressed: () => Navigator.of(context).pushNamed("/user"),
+            ),
+            HomeButton(
+              titleButton: "Post List",
+              onPressed: () => Navigator.of(context).pushNamed("/post"),
+            ),
+            HomeButton(
+              titleButton: "Album List",
+              onPressed: () => Navigator.of(context).pushNamed("/album"),
+            ),
+            HomeButton(
+              titleButton: "Photo List",
+              onPressed: () => Navigator.of(context).pushNamed("/photo"),
+            ),
           ],
         ),
       ),
