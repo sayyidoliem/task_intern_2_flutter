@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:task_intern_2_flutter/utils/route/name_routes.dart';
+import 'package:task_intern_2_flutter/screen.dart';
 import 'package:task_intern_2_flutter/view/album_page.dart';
 import 'package:task_intern_2_flutter/view/comment_page.dart';
 import 'package:task_intern_2_flutter/view/error.dart';

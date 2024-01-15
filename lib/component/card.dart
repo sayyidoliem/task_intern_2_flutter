@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:task_intern_2_flutter/model/user.dart';
+import 'package:task_intern_2_flutter/screen.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({Key? key, required this.user}) : super(key: key);
