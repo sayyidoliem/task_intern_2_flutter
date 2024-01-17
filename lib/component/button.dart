@@ -1,4 +1,4 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 class HomeButton extends StatelessWidget {
   HomeButton({super.key, required this.titleButton, required this.onPressed});

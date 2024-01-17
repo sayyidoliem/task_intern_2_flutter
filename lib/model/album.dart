@@ -1,4 +1,4 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 List<Album> commentFromJson(String str) =>
     List<Album>.from(json.decode(str).map((x) => Album.fromJson(x)));

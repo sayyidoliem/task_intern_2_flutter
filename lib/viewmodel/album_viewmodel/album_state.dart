@@ -1,6 +1,15 @@
 part of 'album_bloc.dart';
 
-@immutable
 sealed class AlbumState {}
 
-final class AlbumInitial extends AlbumState {}
+class AlbumInitial extends AlbumState {}
+
+class AlbumLoading extends AlbumState {}
+
+class AlbumSuccess extends AlbumState {
+  final List<Album> album;
+
+  AlbumSuccess(this.album);
+}
+
+class AlbumError extends AlbumState {}

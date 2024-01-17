@@ -1,11 +1,4 @@
-import 'package:task_intern_2_flutter/screen.dart';
-import 'package:task_intern_2_flutter/view/album_page.dart';
-import 'package:task_intern_2_flutter/view/comment_page.dart';
-import 'package:task_intern_2_flutter/view/error.dart';
-import 'package:task_intern_2_flutter/view/home_page.dart';
-import 'package:task_intern_2_flutter/view/photo_page.dart';
-import 'package:task_intern_2_flutter/view/post_page.dart';
-import 'package:task_intern_2_flutter/view/user_page.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 class MyRoute {
   Route onRoute(RouteSettings settings) {
@@ -13,7 +6,20 @@ class MyRoute {
       case RoutesName.home:
         return MaterialPageRoute(
           settings: settings,
-          builder: (context) => HomePage(),
+          builder: (context) => MultiBlocProvider(providers: [
+            BlocProvider(
+              create: (context) => UserBloc(userService: UserService())..add(GetUserEvent()),
+            ),
+            BlocProvider(
+              create: (context) => PostBloc(postService: PostService())..add(GetPostEvent()),
+            ),
+            BlocProvider(
+              create: (context) => CommentBloc(commentService: CommentService())..add(GetCommentEvent()),
+            ),
+            BlocProvider(
+              create: (context) => AlbumBloc(albumService: AlbumService())..add(GetAlbumEvent()),
+            ),
+          ], child: HomePage()),
         );
 
       case RoutesName.user:
@@ -36,15 +42,10 @@ class MyRoute {
           settings: settings,
           builder: (context) => AlbumPage(),
         );
-      case RoutesName.photo:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (context) => PhotoPage(),
-        );
       default:
         return MaterialPageRoute(
           settings: settings,
-          builder: (context) => ErrorPage(),
+          builder: (context) => const ErrorPage(),
         );
     }
   }

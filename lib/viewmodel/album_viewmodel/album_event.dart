@@ -1,4 +1,5 @@
 part of 'album_bloc.dart';
 
-@immutable
 sealed class AlbumEvent {}
+
+class GetAlbumEvent extends AlbumEvent {}

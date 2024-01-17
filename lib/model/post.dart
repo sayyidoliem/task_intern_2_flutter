@@ -1,4 +1,4 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 List<Post> postFromJson(String str) =>
     List<Post>.from(json.decode(str).map((x) => Post.fromJson(x)));

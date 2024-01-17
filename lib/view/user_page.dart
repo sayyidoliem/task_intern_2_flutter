@@ -1,8 +1,9 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 class UserPage extends StatelessWidget {
-  const UserPage({super.key});
+  const UserPage({super.key, this.userBloc});
 
+  final userBloc;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

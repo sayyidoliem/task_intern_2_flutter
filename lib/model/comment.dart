@@ -1,7 +1,5 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
-List<Comment> commentFromJson(String str) =>
-    List<Comment>.from(json.decode(str).map((x) => Comment.fromJson(x)));
 
 class Comment {
   int postId;

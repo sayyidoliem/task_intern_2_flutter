@@ -9,7 +9,7 @@ class PostLoading extends PostState {}
 class PostSuccess extends PostState {
   final List<Post> post;
 
-  PostSuccess({required this.post});
+  PostSuccess(this.post);
 }
 
 class PostError extends PostState {}

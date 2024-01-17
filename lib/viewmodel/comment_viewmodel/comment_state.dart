@@ -9,7 +9,7 @@ class CommentLoading extends CommentState {}
 class CommentSuccess extends CommentState {
   final List<Comment> comment;
 
-  CommentSuccess({required this.comment});
+  CommentSuccess(this.comment);
 }
 
 class CommentError extends CommentState {}

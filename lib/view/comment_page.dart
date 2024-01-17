@@ -1,8 +1,9 @@
-import 'package:task_intern_2_flutter/screen.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 class CommentPage extends StatelessWidget {
-  const CommentPage({super.key});
+  const CommentPage({super.key, this.commentBloc});
 
+  final commentBloc;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
