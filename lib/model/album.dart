@@ -1,3 +1,8 @@
+import 'package:task_intern_2_flutter/screen.dart';
+
+List<Album> commentFromJson(String str) =>
+    List<Album>.from(json.decode(str).map((x) => Album.fromJson(x)));
+
 class Album {
   int userId;
   int id;

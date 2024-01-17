@@ -10,10 +10,14 @@ export 'package:task_intern_2_flutter/model/comment.dart';
 export 'package:task_intern_2_flutter/model/photo.dart';
 export 'package:task_intern_2_flutter/model/post.dart';
 export 'package:task_intern_2_flutter/model/user.dart';
-export 'package:task_intern_2_flutter/user/user_bloc.dart';
+
+//view model
+export 'package:task_intern_2_flutter/viewmodel/post_viewmodel/post_bloc.dart';
+export 'package:task_intern_2_flutter/viewmodel/user_viewmodel/user_bloc.dart';
 
 //navigation
 export 'package:task_intern_2_flutter/utils/route/name_routes.dart';
+
 //utils
 export 'package:task_intern_2_flutter/utils/route/routes.dart';
 

@@ -11,3 +11,5 @@ class UserSuccess extends UserState {
 
   UserSuccess({required this.users});
 }
+
+class UserError extends UserState {}
