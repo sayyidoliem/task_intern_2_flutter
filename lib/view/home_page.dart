@@ -1,5 +1,6 @@
 import 'package:task_intern_2_flutter/import.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -12,25 +13,23 @@ class HomePage extends StatelessWidget {
   ];
 
   List<Text> appBarTitle = <Text>[
-    const Text('FETCH USERS API',
-        style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
     const Text(
-      'FETCH COMMENTS API',
-      style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
+      'User Page',
     ),
     const Text(
-      'FETCH ALBUMS API',
-      style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
+      'Comment Page',
     ),
     const Text(
-      'FETCH POSTS API',
-      style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
+      'Album Page',
+    ),
+    const Text(
+      'Post Page',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    HomeBloc homeBloc = BlocProvider.of<HomeBloc>(context);
+    HomeBloc homeBloc = context.read<HomeBloc>();
     UserBloc userBloc = BlocProvider.of<UserBloc>(context);
     AlbumBloc albumBloc = BlocProvider.of<AlbumBloc>(context);
     CommentBloc commentBloc = BlocProvider.of<CommentBloc>(context);

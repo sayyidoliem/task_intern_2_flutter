@@ -1,6 +1,3 @@
-import 'package:task_intern_2_flutter/import.dart';
-
-
 class Comment {
   int postId;
   int id;

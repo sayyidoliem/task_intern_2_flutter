@@ -1,5 +1,4 @@
 import 'package:task_intern_2_flutter/import.dart';
-import 'package:http/http.dart' as http;
 part 'post_event.dart';
 part 'post_state.dart';
 

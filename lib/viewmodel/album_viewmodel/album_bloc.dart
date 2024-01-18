@@ -10,7 +10,7 @@ class AlbumBloc extends Bloc<AlbumEvent, AlbumState> {
       emit(AlbumLoading());
       await Future.delayed(const Duration(seconds: 3));
       try {
-        final response = await albumService.fetchPost();
+        final response = await albumService.fetchAlbum();
         emit(AlbumSuccess(response));
       } catch (e) {
         emit(AlbumError());

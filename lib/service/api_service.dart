@@ -4,13 +4,18 @@ import 'package:http/http.dart' as http;
 const String baseUrl = 'https://jsonplaceholder.typicode.com';
 
 class UserService {
-  Future fetchPost() async {
-    final postResponse = await http.get(Uri.parse('$baseUrl/posts'));
-    final postBody = postResponse.body;
-    final postResult = jsonDecode(postBody);
-    List<Post> postList =
-        List.from(postResult.map((posts) => Post.fromJson(posts)));
-    return postList;
+  Future fetchUser() async {
+    final userResponse = await http.get(Uri.parse('$baseUrl/users'));
+    final userBody = userResponse.body;
+    final userResult = jsonDecode(userBody);
+    // List<User> userList =
+    //     List.from(userResult.map((posts) => User.fromJson(posts)));
+    // return userList;
+    List<User> userList = [];
+    for (Map<String, dynamic> i in userResult) {
+      userList.add(User.fromJson(i));
+    }
+    return userList;
   }
 }
 
@@ -26,7 +31,7 @@ class PostService {
 }
 
 class CommentService {
-  Future fetchPost() async {
+  Future fetchComment() async {
     final commentResponse = await http.get(Uri.parse('$baseUrl/comments'));
     final commentBody = commentResponse.body;
     final commentResult = jsonDecode(commentBody);
@@ -37,7 +42,7 @@ class CommentService {
 }
 
 class AlbumService {
-  Future fetchPost() async {
+  Future fetchAlbum() async {
     final albumResponse = await http.get(Uri.parse('$baseUrl/albums'));
     final albumBody = albumResponse.body;
     final albumResult = jsonDecode(albumBody);

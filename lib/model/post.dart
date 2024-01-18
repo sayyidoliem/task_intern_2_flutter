@@ -1,21 +1,21 @@
-import 'package:task_intern_2_flutter/import.dart';
-
-List<Post> postFromJson(String str) =>
-    List<Post>.from(json.decode(str).map((x) => Post.fromJson(x)));
-
 class Post {
   int id;
   int userId;
+  final String title;
+  final String body;
 
-  Post({
-    required this.id,
-    required this.userId,
-  });
+  Post(
+      {required this.id,
+      required this.userId,
+      required this.title,
+      required this.body});
 
   factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
       id: json['id'],
       userId: json['userId'],
+      title: json['title'],
+      body: json['body'],
     );
   }
 }

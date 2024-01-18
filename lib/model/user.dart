@@ -1,33 +1,37 @@
-import 'package:task_intern_2_flutter/import.dart';
-
-List<User> userFromJson(String str) =>
-    List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
-
 class User {
-  int id;
-  String name;
-  String username;
-  String email;
-  String phone;
-  String website;
+  final int id;
+  final String name;
+  final String userName;
+  final String email;
+  final Address? address;
+  final String phone;
+  final String website;
+  final Company? company;
 
-  User({
-    required this.id,
-    required this.name,
-    required this.username,
-    required this.email,
-    required this.phone,
-    required this.website,
-  });
+  User(
+      {required this.id,
+      required this.name,
+      required this.userName,
+      required this.email,
+      this.address,
+      required this.phone,
+      required this.website,
+      required this.company});
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
-      id: json["id"],
-      name: json["name"],
-      username: json["username"],
-      email: json["email"],
-      phone: json["phone"],
-      website: json["website"],
+      id: json['id'],
+      name: json['name'],
+      userName: json['username'],
+      email: json['email'],
+      address: json['address'] != null
+          ? new Address.fromJson(json['address'])
+          : null,
+      phone: json['phone'],
+      website: json['website'],
+      company: json['company'] != null
+          ? new Company.fromJson(json['company'])
+          : null,
     );
   }
 }
