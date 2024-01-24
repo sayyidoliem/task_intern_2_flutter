@@ -1,6 +1,4 @@
-import 'dart:convert';
-import 'package:task_intern_2_flutter/features/comment/data/comment_repositories.dart';
-import 'package:task_intern_2_flutter/features/comment/domain/comment.dart';
+import 'package:task_intern_2_flutter/import.dart';
 import 'package:http/http.dart' as http;
 
 class CommentRemoteService implements CommentRepositories {

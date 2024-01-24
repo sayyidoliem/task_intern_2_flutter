@@ -1,4 +1,4 @@
-import 'package:task_intern_2_flutter/features/comment/domain/comment.dart';
+import 'package:task_intern_2_flutter/import.dart';
 
 abstract class CommentRepositories {
   Future<List<Comment>> fetchComment();

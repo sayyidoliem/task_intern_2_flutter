@@ -1,4 +1,3 @@
-
 import 'package:task_intern_2_flutter/import.dart';
 
 class ListPostPage extends StatelessWidget {

@@ -1,7 +1,5 @@
-import 'dart:convert';
-
 import 'package:task_intern_2_flutter/features/album/data/album_repositories.dart';
-import 'package:task_intern_2_flutter/features/album/domain/album.dart';
+import 'package:task_intern_2_flutter/import.dart';
 import 'package:http/http.dart' as http;
 
 class AlbumRemoteService implements AlbumRepositories {

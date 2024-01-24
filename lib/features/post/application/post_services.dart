@@ -1,7 +1,4 @@
-import 'dart:convert';
-
-import 'package:task_intern_2_flutter/features/post/data/post_repositories.dart';
-import 'package:task_intern_2_flutter/features/post/domain/post.dart';
+import 'package:task_intern_2_flutter/import.dart';
 import 'package:http/http.dart' as http;
 
 class PostRemoteService implements PostRepositories {

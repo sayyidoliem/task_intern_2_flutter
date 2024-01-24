@@ -1,5 +1,3 @@
-import 'package:task_intern_2_flutter/features/album/application/album_services.dart';
-import 'package:task_intern_2_flutter/features/album/domain/album.dart';
 import 'package:task_intern_2_flutter/import.dart';
 
 part 'album_event.dart';

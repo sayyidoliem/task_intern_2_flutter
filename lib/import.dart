@@ -12,6 +12,8 @@ export 'package:task_intern_2_flutter/features/comment/application/comment_servi
 
 //data
 export 'package:task_intern_2_flutter/features/user/data/user_repositories.dart';
+export 'package:task_intern_2_flutter/features/comment/data/comment_repositories.dart';
+export 'package:task_intern_2_flutter/features/post/data/post_repositories.dart';
 
 //model
 export 'package:task_intern_2_flutter/features/post/domain/post.dart';
@@ -32,7 +34,7 @@ export 'package:task_intern_2_flutter/features/home/view/home_page.dart';
 //view model
 export 'package:task_intern_2_flutter/features/user/presentation/viewmodel/user_bloc.dart';
 export 'package:task_intern_2_flutter/features/post/presentation/viewmodel/post_bloc.dart';
-export 'package:task_intern_2_flutter/features/comment/presentation/comment_viewmodel/comment_bloc.dart';
+export 'package:task_intern_2_flutter/features/comment/presentation/viewmodel/comment_bloc.dart';
 export 'package:task_intern_2_flutter/features/album/presentation/viewmodel/album_bloc.dart';
 export 'package:task_intern_2_flutter/features/home/viewodel/home_bloc.dart';
 
